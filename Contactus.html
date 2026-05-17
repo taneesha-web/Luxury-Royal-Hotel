@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+       :root {
+  --bg-color: #0d0d0d;
+  --text-color: #ffffff;
+  --accent-cyan: #00ffff;
+  --accent-red: #ff00ff;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Helvetica', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.contact-container {
+  display: flex;
+  width: 80%;
+  max-width: 1000px;
+  gap: 100px;
+}
+
+/* Form Styles */
+.contact-form { flex: 1; }
+.input-group { margin-bottom: 40px; border-bottom: 1px solid #444; }
+.input-group label { display: block; font-size: 14px; color: #888; }
+.input-group input, .input-group textarea {
+  width: 100%; background: none; border: none; color: #fff; padding: 10px 0; outline: none;
+}
+
+/* Glitch Button */
+.glitch-btn {
+  width: 100%; padding: 20px; background: #fff; color: #000; border: none; font-weight: bold;
+  position: relative; cursor: pointer;
+  box-shadow: -5px 0 var(--accent-cyan), 5px 0 var(--accent-red);
+}
+
+/* Glitch Text Effect */
+.glitch-text {
+  font-size: 80px; position: relative; display: inline-block;
+}
+.glitch-text::before, .glitch-text::after {
+  content: attr(data-text); position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+}
+.glitch-text::before { left: 2px; text-shadow: -2px 0 var(--accent-cyan); clip: rect(44px, 450px, 56px, 0); }
+.glitch-text::after { left: -2px; text-shadow: -2px 0 var(--accent-red); clip: rect(10px, 450px, 30px, 0); }
+
+
+header{
+  position:fixed;
+  width:100%;
+  top:0;
+  left:0;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 70px;
+  z-index:1000;
+  background:rgba(0,0,0,0.5);
+  backdrop-filter:blur(10px);
+}
+
+.logo{
+  font-size:30px;
+  font-weight:bold;
+  color:#00e5ff;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:25px;
+  font-size:18px;
+  transition:0.4s;
+}
+
+nav a:hover{
+  color:#00e5ff;
+}
+
+
+    </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">ROYAL ORBIT</div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="rooms.html">Rooms</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="Contactus.html">Contact</a>
+    </nav>
+  </header>
+    <div class="contact-container">
+  <!-- Left Side: Form Fields -->
+  <div class="contact-form">
+    <div class="input-group">
+      <label>Your Name</label>
+      <input type="text">
+    </div>
+    <div class="input-group">
+      <label>Your Email</label>
+      <input type="email">
+    </div>
+    <div class="input-group">
+      <label>Share your thoughts</label>
+      <textarea rows="4"></textarea>
+    </div>
+    <button class="glitch-btn">SHARE YOUR FEEDBACK</button>
+  </div>
+
+  <!-- Right Side: Decorative Header -->
+  <div class="contact-header">
+    <div class="glitch-wrapper">
+      <h1 class="glitch-text" data-text="Contact">Contact</h1>
+      <div class="line-divider"></div>
+      <h1 class="glitch-text text-right" data-text="Us">Us</h1>
+    </div>
+    <p class="description">It is very important for us to keep in touch with you, so we are always ready to answer any question that interests you. Shoot!</p>
+  </div>
+</div>
+
+
+
+</body>
+</html>
